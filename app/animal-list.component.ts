@@ -5,7 +5,7 @@ import { Animal } from './animal.model';
   selector: 'animal-list',
   template: `
     <ul>
-      <li [class]="ageColor(currentAnimal)" (click)="isDone(currentAnimal)" *ngFor="let currentAnimal of animals">{{currentAnimal.description}} <button (click)="editAnimal(currentAnimal)">Edit!</button></li>
+      <li [class]="ageColor(currentAnimal)" (click)="isDone(currentAnimal)" *ngFor="let currentAnimal of animals">{{currentAnimal.description}} <button (click)="editAnimal(currentAnimal)">Edit Details</button></li>
     </ul>
   `
 })
@@ -13,25 +13,25 @@ import { Animal } from './animal.model';
 export class AnimalListComponent {
   animals: Animal[] = [
     new Animal('Horse', 1),
-    new Animal('Pig', 1),
-    new Animal('Chicken', 2)
+    new Animal('Chicken', 2),
+    new Animal('Rhino', 2)
   ];
 
   isDone(clickedAnimal: Animal) {
     if(clickedAnimal.done === true) {
-      alert("This animal is no longer in this zoo's care.");
+      alert("This animal is no longer at Woodland Park Zoo.");
     } else {
-      alert("This animal is currently residing in the zoo.");
+      alert("This animal currently resides at Woodland Park Zoo.");
     }
   }
 
   ageColor(currentAnimal){
-    if (currentAnimal.age === 1){
-      return "bg-info";
+    if (currentAnimal.age === 2){
+    //   return "bg-danger";
     // } else if (currentAnimal.age === 2) {
-    //   return  "bg-danger";
+      return  "bg-warning";
     } else {
-      return "bg-warning";
+      return "bg-info";
     }
   }
 }
