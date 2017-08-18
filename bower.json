@@ -1,0 +1,17 @@
+{
+  "name": "angular2-zoo-tracker",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Mara Timberlake <maratimberlake@msn.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Epicodus-MT/angular2-zoo-tracker",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
