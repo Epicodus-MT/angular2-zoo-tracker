@@ -1,23 +1,51 @@
 <img src="epicodus.png" align="right">
 
-# Angular To-Do List
+# Angular2 Zoo Tracker
 
 > **Technologies Used** - Javascript, HTML, Firebase API.
 > **IDE Used** - Atom.
 
 #### By _**Mara Timberlake**_
 
-Application for...
+Application for zoo workers to add newly-admitted animals, their likes & dislikes, and the number of caretakers each requires.
 
 ## Description
 
-_This application allows users to..._
+_This application allows users to log a newly-admitted animal by submitting a form with animal species, name, age, diet, zoo location, number of needed caretakers, sex, one like and one dislike. The user may also view a list of animals previously logged, view animals specific to their age (young or mature 2+ years), and edit the animal's name, age or caretakers if necessary._
+
+## Planning
+
+1. Configuration/dependencies
+  * This should include ALL dependencies.
+  * It should also include WHERE they are defined and used in the project
+  * It could include a short description of what each does for you
+
+2. Specs
+  * Spec 1: Description, input, output.
+  * Spec 2: Description, input, output.
+
+3. Integration
+  * Initial routes or index pages with all dependencies in Controller/index.html head
+  * Template/html page for ...
+  * Template/html page for ...
+  * Template/html page for ... (one for each route/integrated user story)
+  * Display...
+  * Integrate feature that...
+
+4. UX/UI
+  * Include and modify bootstrap/materialize/Sass etc.
+  * Develop custom style
+
+5. Polish
+  * Refactor minor portion of...
+  * Delete unused...
+  * Make README awesome
 
 ## What's included
 Within the repository you'll find the following directories and files:
 
 ```
-angular2-to-do/
+angular2-zoo-tracker/
 ├── app/
 |    └── app.component.html
 ├── .gitignore
@@ -31,7 +59,8 @@ angular2-to-do/
 ## Setup/Installation Requirements
 To run this program:
 * _LOCAL: Go to Terminal_
-* `git clone https://github.com/Epicodus-MT/ember-message-board.git
+* `git clone https://github.com/Epicodus-MT/angular2-zoo-tracker.git`
+* `cd angular2-zoo-tracker`
 * `npm install`
 * `bower install`
 
