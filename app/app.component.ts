@@ -24,6 +24,8 @@ import { Animal } from './animal.model';
         <input type="radio" [(ngModel)]="selectedAnimal.age" [value]="2">Mature (2+ years)<br>
         <button (click)="finishedEditing()">Done</button>
       </div>
+      <p>(Blue - Young | Yellow - Mature)
+
     </div>
     `
 })
