@@ -2,7 +2,7 @@
 
 # Angular2 Zoo Tracker
 
-> **Technologies Used** - Javascript, HTML, Firebase API.
+> **Technologies Used** - TypeScript, Javascript, HTML, CSS.
 > **IDE Used** - Atom.
 
 #### By _**Mara Timberlake**_
@@ -16,30 +16,29 @@ _This application allows users to log a newly-admitted animal by submitting a fo
 ## Planning
 
 1. Configuration/dependencies
-  * This should include ALL dependencies.
-  * It should also include WHERE they are defined and used in the project
-  * It could include a short description of what each does for you
+  * Angular2
+  * TypeScript
+  * Node
+  * Gulp
 
 2. Specs
-  * Spec 1: Description, input, output.
-  * Spec 2: Description, input, output.
+
+  * Spec 1: User creates an new animal admitted form, fills out new animal form, new animal appears on bottom of page.
+  * Spec 2: User edits animal details, user clicks 'Edit Animal' button and fills out form, information changes in realtime
 
 3. Integration
-  * Initial routes or index pages with all dependencies in Controller/index.html head
-  * Template/html page for ...
-  * Template/html page for ...
-  * Template/html page for ... (one for each route/integrated user story)
-  * Display...
-  * Integrate feature that...
+  * Components for Creating New Animal
+  * Components for Viewing Animal List
+  * Components for Editing Animal Details
 
 4. UX/UI
   * Include and modify bootstrap/materialize/Sass etc.
   * Develop custom style
 
 5. Polish
-  * Refactor minor portion of...
-  * Delete unused...
-  * Make README awesome
+  * Display of the total number of caretakers needed in a day
+  * Add a property that generates a timestamp of when each animal was admitted
+  * Expand the application to differentiate between animals' species -- group accordingly
 
 ## What's included
 Within the repository you'll find the following directories and files:
@@ -47,16 +46,32 @@ Within the repository you'll find the following directories and files:
 ```
 angular2-zoo-tracker/
 ├── app/
-|    └── app.component.html
+|    └── age-increase.component.ts
+|    └── age-pipe.ts
+|    └── animal-list.component.ts
+|    └── animal.model.ts
+|    └── app.component.ts
+|    └── app.module.ts
+|    └── edit-animal.component.ts
+|    └── main.ts
+|    └── new-animal.component.ts
 ├── .gitignore
 ├── bower.json
-├── package-lock.json
+├── gulpfile.js
+├── index.html
 ├── package.json
-└── README.md
-
+├── README.md
+├── systemjs.config.js
+└── tsconfig.json
 ```
+## Prerequisites/Installation Requirements
 
-## Setup/Installation Requirements
+You will need the following things properly installed on your computer.
+
+* [Git](https://git-scm.com/)
+* [Node.js](https://nodejs.org/)
+
+## Setup
 To run this program:
 * _LOCAL: Go to Terminal_
 * `git clone https://github.com/Epicodus-MT/angular2-zoo-tracker.git`

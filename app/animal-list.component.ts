@@ -5,7 +5,7 @@ import { Animal } from './animal.model';
   selector: 'animal-list',
   template: `
 
-  <select (change)="onChange($event.target.age)">
+  <select (change)="onChange($event.target.value)">
     <option age="allAnimal" selected="selected">All Animals</option>
     <option age="matureAnimal">Mature Animals</option>
     <option age="youngAnimal">Young Animals</option>
@@ -13,7 +13,16 @@ import { Animal } from './animal.model';
 
   <ul class="list-group">
     <li [class]="ageColor(currentAnimal)" *ngFor="let currentAnimal of childAnimalList | age:filterByAge">
-      <h4><strong>{{currentAnimal.name}}</strong> || {{currentAnimal.species}}</h4><h5> Likes: {{currentAnimal.likes}}</h5><h5> Dislikes: {{currentAnimal.dislikes}}</h5><h6> Age: {{ currentAnimal.age }}</h6>
+      <h4><strong>{{currentAnimal.name}}</strong> - {{currentAnimal.species}}</h4>
+      <h5> Age: {{currentAnimal.age}}</h5>
+      <h5> Diet: {{currentAnimal.diet}}</h5>
+      <h5> Location: {{ currentAnimal.location}}</h5>
+      <h5> Caretaker: {{currentAnimal.caretaker}}</h5>
+      <h5> Sex: {{currentAnimal.sex}}</h5>
+      <h5> Likes: {{currentAnimal.likes}}</h5>
+      <h5> Dislikes: {{currentAnimal.dislikes}}</h5>
+      <h5> Date Admitted: {{currentAnimal.date}}</h5>
+
       <button (click) = "ageButtonHasBeenClicked(currentAnimal)">Add One Year</button>
       <button (click)="editButtonHasBeenClicked(currentAnimal)">Edit Animal</button>
     </li>
@@ -37,16 +46,20 @@ export class AnimalListComponent {
 
   ageButtonHasBeenClicked(animalToAdd : Animal) {
     animalToAdd.age += 1;
-    alert("Happy Birthday {{currentAnimal.name}}!");
+    alert("Happy Birthday, " + animalToAdd.name + "!");
   }
 
   ageColor(currentAnimal){
-    if (currentAnimal.age === 2){
+    if (currentAnimal.age <= 1){
     //   return "bg-danger";
     // } else if (currentAnimal.age === 2) {
       return  "bg-warning";
     } else {
       return "bg-info";
     }
+  }
+
+  filterOnAge() {
+
   }
 }
