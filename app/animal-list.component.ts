@@ -6,9 +6,9 @@ import { Animal } from './animal.model';
   template: `
 
   <select (change)="onChange($event.target.value)">
-    <option age="allAnimal" selected="selected">All Animals</option>
-    <option age="matureAnimal">Mature Animals</option>
-    <option age="youngAnimal">Young Animals</option>
+    <option value="allAnimal" selected="selected">All Animals</option>
+    <option value="matureAnimal">Mature Animals</option>
+    <option value="youngAnimal">Young Animals</option>
   </select>
 
   <ul class="list-group">
