@@ -59,6 +59,7 @@ angular2-zoo-tracker/
 ├── bower.json
 ├── gulpfile.js
 ├── index.html
+├── package-lock.json
 ├── package.json
 ├── README.md
 ├── systemjs.config.js
